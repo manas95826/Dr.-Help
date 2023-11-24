@@ -5,6 +5,6 @@ from django.db import models
 class Report(models.Model):
     patient = models.ForeignKey("authenticator.Patient", on_delete=models.CASCADE)
     doctor = models.ForeignKey("authenticator.Doctor", on_delete=models.CASCADE)
-    date = models.DateTimeField(auto_created=True)
+    date = models.DateTimeField(auto_now=True)
     test_for = models.TextField(default="Phenomenia")
     result = models.BooleanField(null=False)
