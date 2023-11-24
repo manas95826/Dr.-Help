@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Cardd from './Card';
+import { useState } from "react";
+import Cardd from "./Card";
 
 const FolderDrop = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearchChange = (event: any) => {
     setSearchQuery(event.target.value);
+    document.getElementById("search-input")?.focus();
   };
 
   const filteredCards = searchQuery
@@ -17,29 +17,28 @@ const FolderDrop = () => {
 
   return (
     <div>
-      <div className='flex flex-1 h-screen w-screen flex-col'>
-        <div className='bg-amber-200 h-16 w-full flex justify-between items-center px-4 flex-shrink-0'>
-          <div>
-            <Link to='/upload-files' className='border border-black p-2'>
-              Get diagnosis
-            </Link>
+      <div className="flex flex-1 h-screen w-screen flex-col">
+        <div className="navbar bg-amber-200 shadow-md mb-3">
+          <div className="flex-1">
+            <a className="btn btn-ghost text-3xl" href="/">
+              Dr.Help
+            </a>
           </div>
-          <div>
-            <Link to='/sign-up' className='border border-black p-2'>
-              Logout
-            </Link>
+          <div className="flex-none gap-2">
+            <div className="form-control">
+              <input
+                id="search-input"
+                type="text"
+                placeholder="Search"
+                className="input input-bordered w-24 md:w-auto"
+                value={searchQuery}
+                onChange={handleSearchChange}
+              />
+            </div>
           </div>
+          <button className="btn mx-3 btn-outline">Logout</button>
         </div>
-        <div className='w-full gap-2 flex justify-center h-32 items-center flex-shrink-0'>
-          Search
-          <input
-            type='text'
-            className='border border-black w-80 h-8 rounded-xl p-3'
-            value={searchQuery}
-            onChange={handleSearchChange}
-          />
-        </div>
-        <div className='flex flex-row flex-wrap'>
+        <div className="flex flex-row flex-wrap">
           {filteredCards.map((card, index) => (
             <Cardd key={index} name={card.name} desc={card.desc} />
           ))}
@@ -50,9 +49,9 @@ const FolderDrop = () => {
 };
 
 const cards = [
-  { name: 'Hello', desc: 'heeeeheheheheh' },
-  { name: 'World', desc: 'another description' },
-  {name: "Lodu", desc: "annaajnshsjahs"}
+  { name: "Hello", desc: "heeeeheheheheh" },
+  { name: "World", desc: "another description" },
+  { name: "Lodu", desc: "annaajnshsjahs" },
   // Add more cards as needed
 ];
 
