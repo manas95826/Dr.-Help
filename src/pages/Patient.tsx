@@ -1,4 +1,6 @@
 import React from 'react'
+import PatientCard from './PatientCard'
+import { Link } from 'react-router-dom'
 
 const Patient = () => {
   return (
@@ -6,9 +8,8 @@ const Patient = () => {
         <div>
             <img src="/assets/defaultpfp.jpg" alt="" height={300} width={300} className='rounded-3xl'/>
         </div>
-        <div className='w-1/3 h-96 bg-slate-200 rounded-xl'>
-
-        </div>
+        <Link to="/" className='absolute top-3/4 left-64 border border-black p-2 rounded-xl'>Go back</Link>
+        <PatientCard first="lorem" second="insanity" third="could've been better" fourth="lmao"/>
     </div>
   )
 }
