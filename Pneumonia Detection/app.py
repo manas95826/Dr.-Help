@@ -31,8 +31,8 @@ def classify_pneumonia(image_path):
     predicted_class = np.argmax(confidence_score)
 
     if predicted_class == 1:
-        return "Pneumonia found!", "success"
+        return 1
     else:
-        return "No Pneumonia Found.", "error"
+        return 0
 
 
