@@ -67,7 +67,7 @@ const SignUp = () => {
         )}
       />
       
-      <Button type="submit" variant={'outline'}>Submit</Button>
+      <Button onClick={() => {window.location.href = "\\"}} type="button" variant={'outline'}>Submit</Button>
     </form>
   </Form>
   )

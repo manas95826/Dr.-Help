@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Cardd from "./Card";
+import { Link } from "react-router-dom";
 
 const FolderDrop = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -37,7 +38,10 @@ const FolderDrop = () => {
             </div>
           </div>
           <div className="navbar-end">
-            <button className="btn mx-1 btn-outline">Logout</button>
+            <Link to="http://127.0.0.1:8501/" className="btn btn-primary">
+              Predict
+            </Link>
+            <Link to={"/sign-up"} className="btn mx-1 btn-outline">Logout</Link>
           </div>
         </div>
         <div className="flex flex-row flex-wrap">
@@ -51,9 +55,9 @@ const FolderDrop = () => {
 };
 
 const cards = [
-  { name: "Hello", desc: "heeeeheheheheh" },
-  { name: "World", desc: "another description" },
-  { name: "Lodu", desc: "annaajnshsjahs" },
+  { name: "Ramesh Singh", desc: "(23 M) - Diabetic since 22/07/2022" },
+  { name: "Suman Baijal", desc: "(33 F) - High blood pressure issues" },
+  { name: "Raman Kumar", desc: "(27 M) - Diagonsed with typhoid" },
   // Add more cards as needed
 ];
 
