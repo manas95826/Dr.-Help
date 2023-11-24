@@ -20,7 +20,8 @@ const AuthLayout = () => {
           <Navigate to='/' />
         ) : (
           <>
-          <section className='flex w-1/2 justify-center items-center'>
+          <section className='flex w-1/2 justify-center items-center flex-col gap-6'>
+            <img src="/assets/mainlogo.svg" alt="" height={350} width={350} className='border border-black p-5 rounded-2xl'/>
             <Outlet />
           </section>
           <img src="/assets/authimg.jpeg" height={600} width={600} alt="" 

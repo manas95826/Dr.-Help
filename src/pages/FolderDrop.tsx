@@ -8,13 +8,18 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import Cardd from './Card'
+import { Button } from '@/components/ui/button'
+import { Link } from 'react-router-dom'
 
 
 const FolderDrop = () => {
   return (
     <div>
       <div className='flex flex-1 h-screen w-screen flex-col'>
-        <div className='bg-gray-300 h-16 w-full z-10'>
+        <div className='bg-gray-300 h-16 w-full'>
+          <Link to='/upload-files' className='border border-black p-2 absolute left-5 top-2'>Get diagnosis</Link>
+          <Link to='/sign-up' className='border border-black p-2 absolute left-1/2 top-2'>Logout</Link>
+
         </div>
         <div className='w-full gap-2 flex justify-center h-32 items-center'>
           Search
