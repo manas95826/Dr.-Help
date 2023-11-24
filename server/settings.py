@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'authenticator',
     'core',
     'corsheaders',
+    'patient_record',
 ]
 
 MIDDLEWARE = [
