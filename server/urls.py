@@ -19,9 +19,8 @@ from django.urls import include, path
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('auth/', include('authenticator.urls')),
-    path('', include('core.urls')),
-
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+    path("admin/", admin.site.urls),
+    path("auth/", include("authenticator.urls")),
+    path("", include("core.urls")),
+    path("patient_record/", include("patient_record.urls"))
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
