@@ -1,5 +1,3 @@
-import React from 'react'
-
 const PatientCard = (props: any) => {
   return (
     <div className='w-1/2 h-2/3 border border-black bg-slate-200 rounded-xl'>

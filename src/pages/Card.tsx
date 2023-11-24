@@ -10,7 +10,12 @@ const Cardd = (props: any) => {
         <div className="card-actions justify-end">
           <button
             onClick={() => {
-              navigate("/patient");
+              navigate("/patient", {
+                state: {
+                  name: props.name,
+                  desc: props.desc,
+                }
+              });
             }}
             className="btn btn-primary"
           >
