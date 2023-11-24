@@ -19,12 +19,12 @@ const FolderDrop = () => {
     <div>
       <div className="flex flex-1 h-screen w-screen flex-col">
         <div className="navbar bg-amber-200 shadow-md mb-3">
-          <div className="flex-1">
+          <div className="navbar-start">
             <a className="btn btn-ghost text-3xl" href="/">
               Dr.Help
             </a>
           </div>
-          <div className="flex-none gap-2">
+          <div className="navbar-center gap-2">
             <div className="form-control">
               <input
                 id="search-input"
@@ -36,7 +36,9 @@ const FolderDrop = () => {
               />
             </div>
           </div>
-          <button className="btn mx-3 btn-outline">Logout</button>
+          <div className="navbar-end">
+            <button className="btn mx-1 btn-outline">Logout</button>
+          </div>
         </div>
         <div className="flex flex-row flex-wrap">
           {filteredCards.map((card, index) => (
