@@ -17,8 +17,8 @@ from dotenv import load_dotenv
 
 # Loading envionment variables
 load_dotenv()
-EMAIL_ADDRESS = os.getenv('happily_sender_email')
-EMAIL_PASSWORD = os.getenv('happily_sender_email_password')
+EMAIL_ADDRESS = os.getenv('mail_sender_email')
+EMAIL_PASSWORD = os.getenv('mail_sender_email_password')
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'authenticator'
 ]
 
